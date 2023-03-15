@@ -1,0 +1,26 @@
+body{
+    background-color: rgb(255, 255, 255);
+    width: 500px;
+}
+h1{
+    font-size: 18px;
+    text-align: center;
+    letter-spacing: 1px;
+    font-weight: bold;
+}
+.custom-container{
+    background-color: rgb(255, 255, 255);
+}
+.custom-window{ 
+    background-color: rgb(58, 58, 58);
+    color: white;
+    margin: 20px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px 0px;
+    border: solid 1px black;
+    text-align: center;
+}
+input[type="color"]{
+    border: none !important;
+    outline: none;
+    background-color: transparent;
+}

@@ -1,0 +1,14 @@
+{
+    "manifest_version": 3,
+    "name": "Scroll Customizating",
+    "version": "1.0",
+    "description": "Allows to custom your scroll",
+    "action":{
+        "default_popup": "index.html",
+        "default_title": "Scroll Customizating"
+    },
+    "content_scripts": [{
+        "matches":["<all_urls>"],
+        "css":["index.css"]
+    }]
+}
