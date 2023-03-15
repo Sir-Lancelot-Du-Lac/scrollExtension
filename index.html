@@ -9,10 +9,31 @@
     <div class="custom-container">
         <h1>Customize your scroll!</h1>
         <div class="custom-window">
-        <p>Customize your main color</p>
-        <input type="color" onchange="handleColorChange(true)"></input>
-        <p>Customize your second color</p>
-        <input type="color" onchange="handleColorChange(false)"></input>
+            <div class="custom">
+                <p>Customize scroll main color</p>
+                <input type="color" id="main"></input>
+            </div>
+            <div class="custom">
+                <p>Customize scroll second color</p>
+                <input type="color" id="second"></input>
+            </div>
+            <div class="custom">
+                <p>Customize scroll roundness</p>
+                <input type="range"/>
+            </div>
+            <div class="custom">
+                <p>Customize scroll width</p>
+                <input type="range"/>
+            </div>
+            <div class="custom" id="checkboxes">
+                <label><input type="checkbox"/>Force scrollbar</label>
+                <label><input type="checkbox"/>Hide scrollbar</label>
+            </div>
+            <br/>
+            <div class="custom" id="buttons">
+                <button id="buttonTry">Try!</button>
+                <button id="buttonReset">Reset!</button>
+            </div>
         </div>
     </div>
 

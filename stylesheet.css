@@ -12,15 +12,52 @@ h1{
     background-color: rgb(255, 255, 255);
 }
 .custom-window{ 
-    background-color: rgb(58, 58, 58);
+    background-color: rgb(107, 107, 107);
     color: white;
     margin: 20px;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px 0px;
     border: solid 1px black;
+    border-radius: 7px;
     text-align: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.custom{
+    margin: 5px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px 0px;
+    background-color: rgb(44, 44, 44);
+    border-radius: 6px;
+    flex-basis: 21%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#buttons{
+    flex-basis: 40%;
+}
+#checkboxes{
+    flex-basis: 40%;
 }
 input[type="color"]{
     border: none !important;
     outline: none;
     background-color: transparent;
+}
+input[type="range"]{
+    width: 80%;
+}
+input[type="checkbox"]{
+    margin: 6px;
+}
+button{
+    margin: 4px;
+    background-color: rgb(210, 210, 210);
+    border: none;
+    border-radius: 2px;
+}
+input{
+    margin-bottom: 5%;
 }

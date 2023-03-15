@@ -10,5 +10,9 @@
     "content_scripts": [{
         "matches":["<all_urls>"],
         "css":["index.css"]
-    }]
+    }],
+    "permissions": [
+        "tabs",
+        "storage"
+    ]
 }
