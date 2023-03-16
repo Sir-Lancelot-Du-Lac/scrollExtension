@@ -2,7 +2,11 @@ var tabActiveId = "";
 chrome.tabs.query({active: true}, function(tabs){tabActiveId = tabs[0].id});
 var isScrollColorModified = false;
 
-var cssColOne = (color) =>{
+
+
+//-----------functions with css codes fragments
+
+const cssColOne = (color) =>{
     return '\
         ::-webkit-scrollbar-thumb{\
         background-color:' + color + ';\
@@ -25,6 +29,9 @@ const cssRadius = (numb) =>{
         ::-webkit-scrollbar-thumb{\
         border-radius: '+ numb +'px;\
     }'};
+//---------------------------------------
+
+//------------Functions that changes css
 
 const handleColorChange = (type) =>{
     console.log(type);
@@ -34,6 +41,8 @@ const handleColorChange = (type) =>{
         colorMain = color;
         console.log(cssColOne(String(color)));
         console.log(tabActiveId);
+        //------------chrome scripting function allowing to implement css
+        //------------It appears couple more times bellow
         chrome.scripting.insertCSS({
             target:{tabId: tabActiveId},
             css: String(cssColOne(color)),
@@ -90,11 +99,17 @@ const handleCheckboxes = (type) =>{
     }
 };
 
+//---------------------------------------
+
+//----------------Simple messager with instructions
 const handleMessager = (message) =>{
     document.getElementById("information").innerHTML = message;
 
 }
+//---------------------------------------
 
+
+//-----------Listeners of inputs
 const handleListeners = () =>{
     console.log("Loaded")
     document.getElementById("main").addEventListener('change',function(){handleColorChange(true);});
@@ -105,3 +120,4 @@ const handleListeners = () =>{
     document.getElementById("radioSec").addEventListener('click',function(){handleCheckboxes(1)});
     };
 window.addEventListener("load",handleListeners);
+//---------------------------------------
