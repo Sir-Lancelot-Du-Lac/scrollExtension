@@ -58,6 +58,10 @@ button{
     border: none;
     border-radius: 2px;
 }
+button:hover{
+    background-color: rgb(10, 255, 255);
+}
+
 input{
     margin-bottom: 5%;
 }
